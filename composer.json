@@ -1,6 +1,8 @@
 {
     "name": "fluzo/foro",
-    "description": "",
+    "description": "Gestor de foro para Laravel 4.",
+    "keywords": ["laravel", "foro"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Javi",
