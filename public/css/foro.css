@@ -1,0 +1,48 @@
+#boton-modificar {
+    margin-right: 60px;
+}
+
+#tema-titulo {
+    clear: both;
+}
+
+/*#nombre-foro h4 a, #nombre-tema h4 a {
+    padding-left: 15px;
+}*/
+
+#formulario-crear-tema input#nombre  {
+    width: 40%;
+}
+table tr td#icono-foro {
+    border-right: none;
+    vertical-align: middle;
+    width: 1%;
+}
+table tr td#nombre-tema {
+    border-left: none;
+}
+table tr td#nombre-foro {
+    border-left: none;
+}
+
+.panel-tema .panel-heading {
+    background-color: #FF5909;
+    color: white;
+}
+
+.panel-tema .panel-body {
+    border: solid thin #FF5909;   
+}
+.comentarios {
+    border: thin solid #C0C0C0;    
+    margin-bottom: 15px;
+    border-radius: 5px;    
+}
+.cabecera-comentarios {
+    border-radius: 2px;
+    padding: 10px;    
+    margin-bottom: 10px;    
+}
+.cuerpo-comentarios {
+    padding: 0px 10px 10px;
+}
