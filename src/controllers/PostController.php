@@ -37,12 +37,12 @@ class PostController extends \BaseController
             {
                 // Guardamos el tema
                 $this->post->savePost($mensaje);
-                return \Redirect::to(\Session::get('path'))->with('confirmacion', 'Tu comentario será publicado en cuanto lo revisemos, gracias.');
+                return \Redirect::to(\Session::get('path') . '#confirmacion')->with('confirmacion', 'Tu comentario será publicado en cuanto lo revisemos, gracias.');
             }
         }
         else
         {
-            return \Redirect::to(\Session::get('path'))->withErrors($validador)->withInput();
+            return \Redirect::to(\Session::get('path') . '#error')->withErrors($validador)->withInput();
             //->with(array('foro' => Session::get('foro'), 'path' => Session::get('path')));
         }
     }

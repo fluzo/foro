@@ -47,6 +47,6 @@ table tr td#nombre-foro {
     padding: 0px 10px 10px;
 }
 
-.paneles-foro .panel-body {
+.paneles-foro {
     min-height: 180px;
 }

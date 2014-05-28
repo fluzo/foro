@@ -11,12 +11,12 @@ Foro
 <hr />
 @include('foro::migas')
 @if (Input::get('page')<2)
-<div class="paneles-foro">
+
 <div class="panel panel-primary">
   <div class="panel-heading">
       <h3 class="panel-title">{{ $tema->autor }}<span class="pull-right">{{ ucwords(strftime("%A, %d %B %Y - %H:%M",strtotime($tema->created_at))) }}</span></h3>
   </div>
-  <div class="panel-body">
+  <div class="paneles-foro panel-body">
     {{ $tema->cuerpo }}
   </div>
 </div>
@@ -27,12 +27,12 @@ Foro
   <div class="panel-heading">
       <h3 class="panel-title">{{ $post->autor }}<span class="pull-right">{{ ucwords(strftime("%A, %d %B %Y - %H:%M",strtotime($post->created_at))) }}</span></h3>
   </div>
-  <div class="panel-body">
+  <div class="paneles-foro panel-body">
     {{ $post->cuerpo }}
   </div>
 </div>
 @endforeach
-</div>
+
 <nav class="texto-centrado">
 {{ $posts->links() }}
 </nav>
@@ -43,7 +43,7 @@ Foro
 {{-- Mensaje de confirmación de envio de post --}}
 @if (isset($confirmacion)) 
 <br><br>
-<p class="alert alert-success">{{ $confirmacion }}</p>
+<p id="confirmacion" class="alert alert-success">{{ $confirmacion }}</p>
 @endif
 
 @if (Session::get('vista_previa'))
