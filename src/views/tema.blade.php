@@ -7,11 +7,12 @@
 Foro
 @stop
 @section('cuerpo')
-
+<h1>Foro</h1>
+<hr />
 @include('foro::migas')
-<br><br>
 @if (Input::get('page')<2)
-<div class="panel panel-tema">
+<div class="paneles-foro">
+<div class="panel panel-primary">
   <div class="panel-heading">
       <h3 class="panel-title">{{ $tema->autor }}<span class="pull-right">{{ ucwords(strftime("%A, %d %B %Y - %H:%M",strtotime($tema->created_at))) }}</span></h3>
   </div>
@@ -22,7 +23,7 @@ Foro
 @endif
 
 @foreach ( $posts as $post )
-<div class="panel panel-primary">
+<div class="panel panel-tema">
   <div class="panel-heading">
       <h3 class="panel-title">{{ $post->autor }}<span class="pull-right">{{ ucwords(strftime("%A, %d %B %Y - %H:%M",strtotime($post->created_at))) }}</span></h3>
   </div>
@@ -31,6 +32,7 @@ Foro
   </div>
 </div>
 @endforeach
+</div>
 <nav class="texto-centrado">
 {{ $posts->links() }}
 </nav>

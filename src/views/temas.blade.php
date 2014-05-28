@@ -16,6 +16,8 @@ Foro
 <a href="{{ route('crear-tema',$nivel1->id) }}"><button type="button" class="btn btn-success pull-right">Nuevo tema</button></a>
 @endif
 
+<h1>Foro</h1>
+<hr />
 
 {{Session::flash('path',Request::path())}}
 

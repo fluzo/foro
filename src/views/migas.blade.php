@@ -13,7 +13,7 @@
     <a href="{{ route('foro')}}">Inicio</a> »
     <a href="{{ route('foro-level1',array('nivel1'=>$nivel1->slug )) }}"> {{ $nivel1->nombre }}</a> »
         @if (isset($tema->titulo))
-            <a href="{{ route('foro-level2',array('nivel1'=>$nivel1->slug,'nivel2'=>$nivel2->slug )) }}"> {{ $nivel2->nombre }}</a>
+            <a href="{{ route('foro-level2',array('nivel1'=>$nivel1->slug,'nivel2'=>$nivel2->slug )) }}"> {{ $nivel2->nombre }}</a> »
             <span id="tema-titulo">{{ $tema->titulo }}</span>       
         @else
             <span id="tema-titulo">{{ $nivel2->nombre }}</span>
@@ -22,7 +22,7 @@
     @elseif (isset($nivel1))
     <a href="{{ route('foro')}}">Inicio</a> »
        @if (isset($tema->titulo))
-        <a href="{{ route('foro-level1',array('nivel1'=>$nivel1->slug )) }}"> {{ $nivel1->nombre }}</a>
+        <a href="{{ route('foro-level1',array('nivel1'=>$nivel1->slug )) }}"> {{ $nivel1->nombre }}</a> »
         <span id="tema-titulo">{{ $tema->titulo }}</span>
         @else
         <span id="tema-titulo">{{ $nivel1->nombre }}</span>

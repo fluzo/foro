@@ -8,9 +8,9 @@
 Foro
 @stop
 @section('cuerpo')
-
-<h1>{{ $foro->nombre }} :: <span class="text-muted">Crear tema</span></h1>
-<hr>
+<h1>Foro</h1>
+<hr />
+<h2>{{ $foro->nombre }} <small>(Nuevo tema)</small></h2>
 
 {{Session::flash('foro',Session::get('foro'))}}
 {{Session::flash('path',Session::get('path'))}}
@@ -18,7 +18,6 @@ Foro
 @include('foro::errores')
 
 @if (Session::get('vista_previa'))
-<hr />
 <h3 id="vista-previa">Vista previa</h3>
 <div id="vista-previa-comentario" class="well">
 {{ Session::get('mensaje', '') }}

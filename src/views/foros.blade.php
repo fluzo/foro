@@ -12,6 +12,9 @@ Foro
 <button type="button" class="btn btn-success pull-right">Añadir foro</button>
 @endif
 
+<h1>Foro</h1>
+<hr />
+
 @include('foro::migas')
 
 {{-- Tabla de foros --}}
