@@ -12,9 +12,9 @@ class Foro extends \Eloquent
     {
         return Foro::where('id_padre', '=', $id_padre)->get();
     }
-    public function getForoBySlug($slug)
+    public function getForoBySlug($slug,$id_padre)
     {
-        return Foro::where('slug', '=', $slug)->first();
+        return Foro::where('slug', '=', $slug)->where('id_padre', '=', $id_padre)->first();
     }    
     public function getForoById($foro_id)
     {
