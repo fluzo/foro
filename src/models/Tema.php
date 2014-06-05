@@ -53,14 +53,14 @@ class Tema extends \Eloquent
         return $foro->temas()->where('aprobado', '=', true)->orderBy('created_at')->paginate(8);
     }
 
-    public function saveTema($mensaje)
+    public function saveTema($mensaje,$foro_id)
     {
         $tema = new Tema();
         $tema->titulo = \Input::get('titulo');
         $tema->slug = \Str::slug(\Input::get('titulo'));
         $tema->cuerpo = $mensaje;
         $tema->autor = \Input::get('nombre');
-        $tema->foro_id = \Request::segment(3);
+        $tema->foro_id = $foro_id;
         $tema->save();
     }
     public function aprobar($id)

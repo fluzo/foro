@@ -29,7 +29,7 @@ Foro
 
 @elseif (is_null($temas->first()))
 <br><br>
-<p class="alert alert-info">Este foro aun no tiene temas, se el primero en publicar uno.</p>
+<p class="alert alert-info">Este foro aún no tiene temas, se el primero en publicar uno.</p>
 @else
 <table class="table table-bordered">
     <thead>

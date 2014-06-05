@@ -23,7 +23,7 @@ class TemaController extends \BaseController
         return \View::make('foro::crear-tema')->with('foro', $foro);
     }
 
-    public function validarTema()
+    public function validarTema($foro_id)
     {
         $validador = $this->tema->valida();
         if ($validador->passes())
@@ -39,7 +39,7 @@ class TemaController extends \BaseController
             elseif (\Input::get('boton') === 'Enviar') // Si venimos del boton enviar, grabamos y recargamos página.
             {
                 // Guardamos el tema
-                $this->tema->saveTema($mensaje);
+                $this->tema->saveTema($mensaje,$foro_id);
                 return \Redirect::to(\Session::get('path'))->with('confirmacion', 'Tu tema será publicado en cuanto lo revisemos, gracias.');
             }
         }

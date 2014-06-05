@@ -31,20 +31,4 @@
     <a href="{{ route('foro')}}">Inicio</a>
     @endif
 
-
-
-<!--<p class="pull-left">
-@if (isset($nivel1))
-<a href="{{ route('foro')}}">Foro</a> »
-<a href="{{ route('foro-level1',array('nivel1'=>$nivel1->slug )) }}"> {{ $nivel1->nombre }}</a>
-@endif
-
-@if (isset($nivel1) and isset($nivel2))
-» <a href="{{ route('foro-level2',array('nivel1'=>$nivel1->slug,'nivel2'=>$nivel2->slug )) }}"> {{ $nivel2->nombre }}</a>
-@endif
-
-@if (isset($nivel1) and isset($nivel2) and isset($nivel3))
-» <a href="{{ route('foro-level3',array('nivel1'=>$nivel1->slug,'nivel2'=>$nivel2->slug,'nivel3'=>$nivel3->slug )) }}"> {{ $nivel3->nombre }}</a>
-@endif
-</p>-->
     

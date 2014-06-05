@@ -10,7 +10,7 @@ class Foro extends \Eloquent
 
     public function getForos($id_padre)
     {
-        return Foro::where('id_padre', '=', $id_padre)->get();
+        return Foro::where('id_padre', '=', $id_padre)->orderBy('nombre','asc')->get();
     }
     public function getForoBySlug($slug,$id_padre)
     {
