@@ -1,10 +1,10 @@
 @extends('foro::base')
 @section('head')
 @parent
-<meta name="description" content="Foro" />
+<meta name="description" content="{{str_limit($tema->cuerpo,200)}}" />
 @stop
 @section('title')
-Foro
+{{$tema->titulo}}
 @stop
 @section('cuerpo')
 <h1>Foro</h1>
