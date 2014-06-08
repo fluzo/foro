@@ -1,7 +1,7 @@
 @extends('foro::base')
 @section('head')
 @parent
-<meta name="description" content="Foro de {{$nivel3->nombre or ''}} ({{$nivel2->nombre or ''}}), {{$nivel1->nombre or Request::server('SERVER_NAME')}}" />
+<meta name="description" content="Foro {{$nivel3->nombre or ''}} | {{$nivel2->nombre or ''}} | {{$nivel1->nombre or Request::server('SERVER_NAME')}}" />
 @stop
 @section('title')
 Foro {{ $nivel3->nombre or '' }} | {{$nivel2->nombre or ''}} | {{$nivel1->nombre or ''}}
