@@ -1,6 +1,7 @@
 @extends('foro::base')
 @section('head')
 @parent
+<meta name="robots" content="noindex"> 
 <meta name="description" content="Foro" />
 <meta name="robots" content="noindex">
 @stop
