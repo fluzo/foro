@@ -1,7 +1,7 @@
 @extends('foro::base')
 @section('head')
 @parent
-<meta name="description" content="{{str_limit($tema->cuerpo,200)}}" />
+<meta name="description" content="{{{str_limit($tema->cuerpo,200)}}}" />
 @stop
 @section('title')
 {{$tema->titulo}}
